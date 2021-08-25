@@ -1,0 +1,229 @@
+@use '../abstracts/abstracts' as *;
+
+.container {
+  margin: 0 auto;
+  display: flex;
+  width: 100%;
+  // z-index: -10;
+}
+
+.btn {
+  display: block;
+  cursor: pointer;
+  font-family: $tertiary-font;
+  letter-spacing: 1pt;
+  font-weight: 800;
+  background-color: transparent;
+  font-size: 1.5rem;
+  border: 1px solid #fff;
+  border-radius: 5px;
+  color: #fff;
+  text-align: center;
+  padding: 0.3em 0;
+  transition: all 0.1s linear;
+  &:hover {
+    background-color: $primary-light;
+    color: $primary-dark;
+  }
+  &:focus {
+    color: $secondary-light;
+  }
+}
+
+.form-container {
+  width: 100%;
+  height: 50%;
+  margin: 0 auto;
+  align-self: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+  text-align: center;
+  background-color: $primary-dark;
+  h1 {
+    font-family: $tertiary-font;
+    letter-spacing: 1pt;
+    color: #fff;
+  }
+  .form {
+    width: 100%;
+    // height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    h1 {
+      margin-bottom: 50px;
+    }
+    .form-group {
+      display: flex;
+      justify-content: space-between;
+      margin: 5px 0;
+      width: 100%;
+
+      .file-input {
+        width: 100%;
+        input {
+          display: none;
+        }
+      }
+
+      .text-area {
+        border-radius: 5px;
+        margin-top: 500px;
+      }
+    }
+    .submit-btn {
+      margin-top: 10px;
+      margin: 10px auto 0;
+      width: 100%;
+      max-width: 400px;
+      @include mq("medium") {
+        font-size: 2rem;
+      }
+      @include mq("huge") {
+        font-size: 2.5rem;
+      }
+    }
+    .form-label {
+      font-size: 2em;
+      color: #fff;
+    }
+  }
+}
+
+.text-input {
+  font-family: $tertiary-font;
+  letter-spacing: 1pt;
+  text-align: center;
+  outline: 0;
+  font-weight: 600;
+  background-color: transparent;
+  font-size: 1.5rem;
+  border-width: 0 0 1px;
+  color: #fff;
+  padding: 0.2em 0;
+  width: 100%;
+}
+
+.active {
+  color: $secondary-light;
+}
+
+.link {
+  color: $primary-light;
+  font-family: $tertiary-font;
+  letter-spacing: 6pt;
+  font-size: 3rem;
+  font-weight: 300;
+  text-transform: uppercase;
+  &:hover {
+    color: $secondary-light;
+  }
+  &:focus {
+    color: $secondary-light;
+  }
+}
+
+// .table {
+//   margin: 0 auto;
+//   width: 80%;
+//   max-width: 600px;
+//   .table-head {
+//     color: $primary-light;
+//     font-size: 1.5rem;
+//     font-weight: 200;
+//     text-align: center;
+//     margin-bottom: 5px;
+//   }
+//   .table-break {
+//     margin-top: 10px;
+//     border-bottom: 1px #fff solid;
+//   }
+//   .col-1 {
+//     color: #fff;
+//     text-align: center;
+//     min-width: 100px;
+//     white-space: nowrap;
+//   }
+
+//   .col-2 {
+//     color: #fff;
+//     text-align: center;
+//     min-width: 100px;
+//     white-space: nowrap;
+//   }
+
+//   td {
+//     font-size: 1.5rem;
+//     text-align: center;
+//     padding: 0.1em 0;
+//   }
+// }
+
+.social {
+  opacity: 0;
+  width: 100%;
+  position: absolute;
+  bottom: 5%;
+  left: 0;
+  a {
+    img {
+      width: 30px;
+      margin: 0 5px;
+    }
+  }
+}
+
+.cards-container {
+  width: 100%;
+  // margin: 0 auto;
+  .card-item {
+    // width: 100%;
+    position: relative;
+    // &:hover {
+    //   opacity: 0.8;
+    // }
+    .card-img {
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      &::after {
+        content: "";
+        @include overlay;
+      }
+      // width: 100%;
+
+      .text {
+        z-index: 1;
+        display: flex;
+        flex-direction: column;
+        h1 {
+          color: $primary-light;
+          z-index: 1;
+          font-size: 4rem;
+          margin: 4em 0.5em 0.2em;
+          mark {
+            color: inherit;
+            font-family: $tertiary-font;
+            background-color: transparent;
+            padding: 0 0.1em;
+          }
+        }
+      }
+    }
+    &:hover {
+      .text {
+        h1 {
+          mark {
+            color: $secondary-light;
+            background-color: $primary-dark;
+          }
+        }
+      }
+      .overlay {
+        background-color: rgba($color: $primary-light, $alpha: 0.7);
+      }
+    }
+  }
+}

@@ -1,0 +1,117 @@
+@use '../abstracts/abstracts' as *;
+@use 'utilities' as *;
+.footer {
+  background-color: $primary-dark;
+  width: 100%;
+  text-align: center;
+  border-top: 1px solid rgba($color: #fff, $alpha: 0.1);
+  &-container {
+    padding: 1em;
+    max-width: 1024px;
+    margin: 0 auto;
+    .inner-container {
+      @include mq("large") {
+        display: flex;
+        align-items: center;
+      }
+      .address {
+        margin-top: 3em;
+        flex-grow: 1;
+        h1 {
+          font-size: 2rem;
+        }
+        ul {
+          li {
+            &:first-child {
+              font-weight: 400;
+            }
+            &:last-child {
+              font-weight: 400;
+            }
+            color: #fff;
+            margin-bottom: 10px;
+            letter-spacing: 0.5pt;
+            font-weight: 200;
+          }
+        }
+      }
+      .footer-social {
+        margin-top: 3em;
+        flex-grow: 1;
+        width: 100%;
+        display: flex;
+        // background-color: red;
+        .social-icons {
+          margin: 0 auto;
+          a {
+            margin-right: 0.5em;
+            img {
+              width: 30px;
+            }
+          }
+        }
+      }
+      .footer-menu {
+        margin-top: 3em;
+        .menu-list {
+          display: flex;
+          justify-content: space-between;
+
+          @include mq("large") {
+            flex-direction: column;
+            width: 176px;
+          }
+          li {
+            margin-bottom: 10px;
+            a {
+              text-transform: capitalize;
+              color: #ddd;
+              font-size: 1.2rem;
+              letter-spacing: 1.9pt;
+              font-weight: 400;
+              &:hover {
+                color: $secondary-light;
+              }
+            }
+          }
+        }
+      }
+    }
+    .footer-trademark {
+      margin-top: 3em;
+      p {
+        color: #fff;
+        letter-spacing: 1pt;
+        font-size: 0.8rem;
+        font-weight: 300;
+        line-height: 1.5;
+      }
+    }
+    .policies {
+      margin-top: 3em;
+      display: flex;
+      justify-content: center;
+      a {
+        margin: 0 5px;
+        color: #fff;
+        letter-spacing: 1pt;
+        font-size: 0.8rem;
+        font-weight: 300;
+        line-height: 1.5;
+        &:hover {
+          color: $secondary-light;
+        }
+      }
+      p {
+        transform: translateY(2px);
+        color: #fff;
+        font-size: 0.8rem;
+        font-weight: 300;
+      }
+    }
+  }
+}
+
+.home {
+  background-color: blue;
+}

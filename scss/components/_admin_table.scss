@@ -1,0 +1,117 @@
+@use '../abstracts/abstracts' as *;
+
+h1 {
+  text-transform: uppercase;
+  font-size: 2.5rem;
+  color: #fff;
+  font-family: $tertiary-font;
+  margin-bottom: 10px;
+}
+.search {
+  border: none;
+}
+
+.manage-items {
+  width: 100%;
+  margin: 7em auto;
+  text-align: center;
+  max-width: 1024px;
+  .create-item {
+    width: 90%;
+    margin: 1em auto;
+    max-width: 300px;
+  }
+}
+  .table-container {
+    width: 100%;
+    .table {
+      width: 80%;
+      margin: 0 auto;
+      display: block;
+      border-collapse: collapse;
+      white-space: nowrap;
+      @include mq("medium") {
+        display: table;
+      }
+      thead {
+        display: none;
+        @include mq("medium") {
+          display: table-header-group;
+        }
+        th {
+          background-color: $primary-dark;
+          color: #ccc;
+          border: 1px solid #aaa;
+          padding: 0.5em 0;
+          font-weight: 200;
+        }
+      }
+      tbody {
+        display: block;
+
+        @include mq("medium") {
+          display: table-row-group;
+        }
+        tr {
+          display: block;
+          padding-bottom: 2em;
+          @include mq("medium") {
+            display: table-row;
+            background-color: $primary-dark;
+            text-align: center;
+          }
+          td {
+            background-color: $primary-dark;
+            display: block;
+            color: #fff;
+            border: 1px solid #aaa;
+            // width: 100%;
+            @include mq("medium") {
+              background-color: transparent;
+              display: table-cell;
+            }
+            .table-btn {
+              display: block;
+              width: 100%;
+              border: none;
+              padding: 0.5em 0.5em;
+              &:focus {
+                background-color: $secondary-light;
+                color: #fff;
+              }
+              &.delete {
+                &:hover {
+                  color: $primary-light;
+                }
+                &:focus {
+                  background-color: $primary-light;
+                  color: #fff;
+                }
+              }
+            }
+          }
+          .data {
+            text-align: right;
+            position: relative;
+            padding: 0.5em 0.5em;
+            @include mq("medium") {
+              text-align: center;
+            }
+            &::before {
+              content: attr(data-label);
+              color: #ccc;
+              padding-left: 0.5em;
+              position: absolute;
+              left: 0;
+              top: 50%;
+              transform: translateY(-50%);
+              @include mq("medium") {
+                display: none;
+              }
+            }
+          }
+        }
+      }
+    }
+  }
+

@@ -1,0 +1,126 @@
+@use '../abstracts/abstracts' as *;
+
+.news-title {
+  width: 100%;
+  text-align: center;
+  padding-top: 1px;
+  margin-bottom: 10px;
+  // margin: 0;
+
+  h1 {
+    font-size: 4.8rem;
+    margin-top: 2em;
+    @include mq("small") {
+      font-size: 6rem;
+    }
+    @include mq("medium") {
+      font-size: 8rem;
+    }
+    @include mq("large") {
+      font-size: 10rem;
+    }
+    span {
+      font-family: inherit;
+    }
+  }
+}
+
+.container {
+  .news-container {
+    width: 100%;
+    margin: 0 auto;
+    @include mq("medium") {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.6em;
+    }
+    @include mq("huge") {
+      grid-template-columns: repeat(3, 1fr);
+    }
+    a {
+      &:hover {
+        opacity: 0.8;
+      }
+      &:first-child {
+        @include mq("medium") {
+          grid-column: 1 / span 2;
+        }
+        @include mq("huge") {
+          grid-column: 1 / span 3;
+        }
+        .news-item {
+          padding: 0;
+          .articles-img {
+            @include mq("medium") {
+              padding: 24em 2em 2em;
+            }
+            @include mq("large") {
+              padding: 30em 2em 2em;
+            }
+            @include mq("full") {
+              padding: 36em 2em 2em;
+            }
+          }
+        }
+      }
+
+      .news-item {
+        width: 100%;
+        position: relative;
+        .articles-img {
+          background-repeat: no-repeat;
+          background-position: center;
+          background-size: cover;
+          width: 100%;
+          height: 0;
+          // padding: 12em 2em 2em;
+          padding-bottom: 100%;
+          &::after {
+            content: "";
+            @include overlay;
+          }
+          @include mq("medium") {
+            // background: red;
+          }
+          // @include mq("large") {
+          //   padding: 16em 2em 2em;
+          // }
+          // @include mq("full") {
+          //   padding: 24em 2em 2em;
+          // }
+          .text {
+            position: absolute;
+            bottom: 0;
+            left: 1em;
+            z-index: 1;
+            // display: flex;
+            // flex-direction: column;
+            h1 {
+              z-index: 1;
+              color: $primary-light;
+              font-size: 4rem;
+              mark {
+                color: inherit;
+                font-family: $tertiary-font;
+                background-color: transparent;
+                padding: 0 0.1em;
+              }
+            }
+          }
+        }
+        &:hover {
+          .text {
+            h1 {
+              mark {
+                background-color: $primary-dark;
+              }
+            }
+          }
+          .overlay {
+            background-color: rgba($color: $secondary-light, $alpha: 0.7);
+          }
+        }
+      }
+    }
+  }
+}

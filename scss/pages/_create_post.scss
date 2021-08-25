@@ -1,0 +1,18 @@
+.post-form {
+  background-color: transparent;
+  width: 100%;
+  max-width: 1224px;
+  margin-top: 10em;
+  .form {
+    padding: 0 1em;
+    .text-input,
+    .file-input {
+      margin: 0 auto;
+      max-width: 300px;
+    }
+    .submit-btn {
+      font-size: 1.5rem;
+      max-width: 300px;
+    }
+  }
+}

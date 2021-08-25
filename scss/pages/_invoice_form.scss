@@ -1,0 +1,145 @@
+@use '../abstracts/abstracts' as *;
+.invoice-container {
+  width: 100%;
+  display: flex;
+  .invoice {
+    margin: 100px auto 0;
+    width: 80%;
+    max-width: 1224px;
+    h1 {
+      text-align: center;
+      margin-bottom: 40px;
+    }
+    .invoice-form {
+      width: 100%;
+      overflow-x: hidden;
+      .addresses {
+        @include mq('large'){
+          display: grid;
+          grid-template-columns: repeat(2, 1fr);
+          gap: 20px;
+        }
+      }
+      .invoice-items {
+        width: 100%;
+        .invoice-section {
+          width: 100%;
+          display: flex;
+          flex-direction: column;
+          margin: 50px 0;
+          @include mq('large'){
+            margin: 20px 0;
+          }
+          h1 {
+            margin: 0;
+          }
+          .form-group {
+            &.invoice-form-group {
+              margin: 10px 0;
+              // text-align: center;
+              label {
+                font-size: 1.5rem;
+                font-weight: 200;
+                color: #fff;
+                text-align: center;
+              }
+              .text-input {
+                &.invoice-input {
+                  margin-top: 10px;
+                  border: 1px solid #fff;
+                  background-color: #fff;
+                  border-radius: 5px;
+                  color: $primary-dark;
+                  &::placeholder {
+                    color: #fff;
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      .table-container {
+        width: 100%;
+        table {
+          width: 100%;
+          margin-bottom: 20px;
+          tbody {
+            width: 100%;
+            .void-data {
+              border: none;
+            }
+            .data {
+              border: 1px $primary-dark solid;
+              padding: 0;
+              .invoice-input {
+                padding-left: 0.1em;
+                border: none;
+                outline: none;
+                font-size: 1.5rem;
+                width: 60%;
+                @include mq('medium') {
+                  width: 100%;
+                }
+                &.total-label {
+                  display: none;
+                  @include mq('medium') {
+                    display: block;
+                  }
+                }
+              }
+              &::before {
+                content: attr(data-label);
+                color: #ccc;
+                font-size: 1.5rem;
+                position: absolute;
+                left: 0;
+                @include mq("medium") {
+                  display: none;
+                }
+              }
+            }
+          }
+        }
+      }
+      .send-to {
+        width: 100%;
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        @include mq('medium'){
+          flex-direction: row;
+        }
+        label {
+          font-size: 1.5rem;
+          font-weight: 200;
+          color: #fff;
+          text-align: center;
+          margin-bottom: 5px;
+        }
+        input {
+          width: 100%;
+          max-width: 300px;
+          padding: 0.1em 0.2em;
+          font-size: 1.5rem;
+          border: 1px solid #fff;
+          background-color: #fff;
+          border-radius: 5px;
+          color: $primary-dark;
+          margin: 0 20px;
+        }
+        .btn {
+          font-size: 1rem;
+          padding: 0.1em 2em;
+        }
+
+      }
+      .submit-btn {
+        margin: 20px auto;
+        width: 80%;
+        max-width: 300px;
+      }
+    }
+  }
+}

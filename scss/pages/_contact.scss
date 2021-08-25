@@ -1,0 +1,57 @@
+@use '../abstracts/abstracts' as *;
+
+.contact-form {
+  background: rgba($color: $primary-dark, $alpha: 0.2);
+  margin: 0 auto;
+  width: 100%;
+  max-width: 1440px;
+  // flex-direction: column;
+  padding: 7em 1em;
+  @include mq("large") {
+    display: flex;
+    padding-bottom: 4em;
+  }
+  .heading {
+    width: 100%;
+    flex-shrink: 3;
+    h1 {
+      // margin: 7em 0 1em;
+      font-size: 4rem;
+    }
+    ul {
+      margin-bottom: 2em;
+      li {
+        color: #fff;
+        line-height: 1.3;
+        font-size: 1.3rem;
+        font-weight: 300;
+      }
+    }
+  }
+  .form-container {
+    background: transparent;
+    // background: red;
+    width: 100%;
+    // flex-grow: 3;
+    // margin: 0 1em 1em;
+    .form {
+      width: 100%;
+      margin: 0;
+      .form-group {
+        width: 100%;
+        .text-input {
+          text-align: left;
+          padding: 1em 1em;
+          border: 1px #fff solid;
+          border-radius: 5px;
+          background: #fff;
+          color: $primary-dark;
+        }
+        .textarea {
+          margin: 0;
+          min-height: 10em;
+        }
+      }
+    }
+  }
+}

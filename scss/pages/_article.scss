@@ -1,0 +1,76 @@
+@use "../abstracts/abstracts" as *;
+
+.container {
+  .article-container {
+    width: 100%;
+    z-index: -1;
+    .article-header {
+      position: relative;
+      width: 100%;
+      text-align: center;
+      .article-img {
+        width: 100%;
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        padding: 10em 0;
+        z-index: 1;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        &::after {
+          content: "";
+          @include overlay;
+        }
+        @include mq("medium") {
+          padding: 12em 0;
+        }
+        @include mq("large") {
+          padding: 14em 0;
+        }
+        @include mq("full") {
+          padding: 16em 0;
+        }
+        h1 {
+          z-index: 1;
+          @include mq("small") {
+            font-size: 3rem;
+          }
+          @include mq("medium") {
+            font-size: 5rem;
+          }
+          @include mq("large") {
+            font-size: 7rem;
+          }
+          @include mq("huge") {
+            font-size: 9rem;
+          }
+        }
+      }
+    }
+    .article-body {
+      background-color: #fff;
+      .body-container {
+        margin: 0 auto;
+        padding: 2em;
+        max-width: 1024px;
+        h2 {
+          font-weight: 200;
+          margin-bottom: 1em;
+        }
+        p {
+          line-height: 1.7;
+          font-size: 1.2rem;
+          font-weight: 300;
+          margin-bottom: 1em;
+          @include mq("large") {
+            font-size: 1.4rem;
+          }
+          @include mq("huge") {
+            font-size: 1.6rem;
+          }
+        }
+      }
+    }
+  }
+}

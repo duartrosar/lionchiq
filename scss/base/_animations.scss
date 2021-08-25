@@ -1,0 +1,89 @@
+// MENU ANIMATIONS
+// Slide logo in to viewport
+@keyframes slide-logo {
+  0% {
+    transform: translateX(-100px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+// Slide burger bars in to viewport
+@keyframes slide-burger {
+  0% {
+    // FIX THIS
+    transform: translateX(100px);
+    // transform: translateX(0);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+
+// LOADING PAGE ANIMATIONS
+// Logo Face
+@keyframes appear {
+  0% {
+    transform: translateY(600px);
+  }
+  60% {
+    transform: translateY(-50px);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}
+// Logo Eyes
+@keyframes flicker {
+  0% {
+    opacity: 0;
+  }
+  5% {
+    opacity: 1;
+  }
+  10% {
+    opacity: 0;
+  }
+  15% {
+    opacity: 1;
+  }
+  20% {
+    opacity: 0;
+  }
+  30% {
+    opacity: 1;
+  }
+  35% {
+    opacity: 0;
+  }
+  40% {
+    opacity: 1;
+  }
+  45% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0;
+  }
+  100% {
+    opacity: 1;
+  }
+}
+// Slide Loading Page
+@keyframes slideload {
+  0% {
+    transform: translateY(0);
+  }
+  100% {
+    transform: translateY(-100vh);
+  }
+}
+// Slide Home Page
+@keyframes slidehome {
+  0% {
+    transform: translateY(100vh);
+  }
+  100% {
+    transform: translateY(0);
+  }
+}

@@ -1,0 +1,69 @@
+@use '../abstracts/abstracts' as *;
+
+.container {
+  a {
+    &:hover {
+      opacity: 0.8;
+    }
+  }
+  .work-container {
+    width: 100%;
+    margin: 0 auto;
+    @include mq("huge") {
+      display: grid;
+      grid-template-columns: repeat(2, 1fr);
+      gap: 0.6em;
+    }
+
+    .work-item {
+      width: 100%;
+      position: relative;
+      .work-img {
+        background-repeat: no-repeat;
+        background-position: center;
+        background-size: cover;
+        width: 100%;
+        padding: 20em 1em 0;
+        &::after {
+          content: "";
+          @include overlay;
+        }
+        @include mq("medium") {
+          padding: 35em 1em 0;
+        }
+
+        .text {
+          z-index: 1;
+          display: flex;
+          flex-direction: column;
+          h1 {
+            color: $primary-light;
+            z-index: 1;
+            font-size: 4rem;
+            @include mq("medium") {
+              font-size: 6rem;
+            }
+            mark {
+              color: inherit;
+              font-family: $tertiary-font;
+              background-color: transparent;
+              padding: 0 0.1em;
+            }
+          }
+        }
+      }
+      &:hover {
+        .text {
+          h1 {
+            mark {
+              background-color: $primary-dark;
+            }
+          }
+        }
+        .overlay {
+          background-color: rgba($color: $primary-light, $alpha: 0.7);
+        }
+      }
+    }
+  }
+}

@@ -1,0 +1,28 @@
+$primary-light: #f78164;
+// $primary-dark: #500000;
+$primary-dark: rgb(20, 20, 20);
+$secondary-light: #249ea0;
+// $secondary-dark: ;
+
+$primary-font: "Jost", sans-serif;
+$secondary-font: "Roboto", sans-serif;
+$tertiary-font: "Big Shoulders Stencil Display", sans-serif;
+
+$bg-img-mobile: url("../img/cracked_ground_mobile_dark.png") no-repeat center
+  center/cover;
+
+$bg-img-desktop: url("../img/cracked_ground_dark.png") no-repeat center
+  center/cover;
+
+$bg-img-in: url("../img/backgrounds/cracked_ground_inverted.png") no-repeat
+  center center/cover;
+
+// Media queries breakpoints
+$breakpoints: (
+  tiny: 324px,
+  small: 480px,
+  medium: 768px,
+  large: 1020px,
+  huge: 1224px,
+  full: 1440px,
+);

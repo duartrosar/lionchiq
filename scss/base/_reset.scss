@@ -1,0 +1,30 @@
+@use '../abstracts/variables' as *;
+
+// Reset Styles
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  letter-spacing: -0.5pt;
+  font-family: $primary-font;
+}
+
+body {
+  line-height: 1;
+  // overflow-y: hidden;
+  overflow-x: hidden;
+  position: relative;
+}
+
+a {
+  text-decoration: none;
+  color: #fff;
+  &:hover {
+    color: $secondary-light;
+  }
+}
+
+ul {
+  list-style: none;
+}
+

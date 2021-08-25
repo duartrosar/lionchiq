@@ -1,0 +1,43 @@
+@use 'variables' as *;
+
+@mixin flex_setup(
+  $direction: row,
+  $justify: center,
+  $align-items: center,
+  $text-align: center
+) {
+  display: flex;
+  flex-direction: $direction;
+  justify-content: $justify;
+  align-items: $align-items;
+  text-align: $text-align;
+}
+
+// Chosse which breakpoint to use in a media query
+@mixin mq($point) {
+  $size: map-get($breakpoints, $point);
+
+  @media only screen and (min-width: $size) {
+    @content;
+  }
+}
+
+@mixin branded_text($size) {
+  color: rgba(36, 158, 160, 0.6);
+  font-family: $primary-font;
+  text-transform: uppercase;
+  font-size: $size;
+  font-style: italic;
+  font-weight: 800;
+  -webkit-text-stroke: 2px $primary-light;
+}
+
+@mixin overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba($color: $primary-dark, $alpha: 0.7);
+  z-index: 0;
+}

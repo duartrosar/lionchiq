@@ -1,0 +1,88 @@
+@use "../abstracts/abstracts" as *;
+
+.project-container {
+  width: 100%;
+  background-color: $primary-dark;
+  .project-header {
+    position: relative;
+    width: 100%;
+    text-align: center;
+    .project-img {
+      width: 100%;
+      background-repeat: no-repeat;
+      background-position: center;
+      background-size: cover;
+      padding: 19em 0;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      &::after {
+        content: "";
+        @include overlay;
+      }
+      h1 {
+        z-index: 1;
+        @include mq("small") {
+          font-size: 3rem;
+        }
+        @include mq("medium") {
+          font-size: 5rem;
+        }
+        @include mq("large") {
+          font-size: 7rem;
+        }
+        @include mq("huge") {
+          font-size: 9rem;
+        }
+      }
+    }
+  }
+  .project-body {
+    .body-container {
+      margin: 0 auto;
+      padding: 2em;
+      max-width: 1024px;
+      a {
+        z-index: 10;
+        h2 {
+          width: 100%;
+          color: $primary-light;
+          font-weight: 200;
+          margin-bottom: 1em;
+          text-align: right;
+          &:hover {
+            color: $secondary-light;
+          }
+        }
+      }
+      p {
+        color: #ddd;
+        line-height: 1.7;
+        font-size: 1.2rem;
+        font-weight: 300;
+        margin-bottom: 1em;
+        @include mq("medium") {
+          font-size: 1.4rem;
+        }
+        @include mq("large") {
+          font-size: 1.6rem;
+        }
+        @include mq("huge") {
+          font-size: 1.8rem;
+        }
+      }
+    }
+    .social-project {
+      width: 100px;
+      margin: 0 auto 10px;
+      display: flex;
+      a {
+        margin: 0 auto;
+        img {
+          width: 30px;
+          margin: 0 auto;
+        }
+      }
+    }
+  }
+}

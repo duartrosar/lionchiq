@@ -1,0 +1,814 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://use.fontawesome.com/releases/v5.15.3/css/all.css"
+      integrity="sha384-SZXxX4whJ79/gErwcOYf+zWLeJdY/qpuqC4cAa9rOGUstPomtqpuNWT9wdPEn2fk"
+      crossorigin="anonymous"
+    />
+    <link rel="stylesheet" href="../css/style.css" />
+    <link rel="shortcut icon" type="image/x-icon" href="../favicon.ico" />
+    <title>Admin | Welcome</title>
+  </head>
+  <body>
+    <div class="background">
+      <div class="bg-img"></div>
+    </div>
+    <div class="loading-page">
+      <img id="face" class="logo-face" src="./img/logo_face.png" alt="logo" />
+      <img id="eyes" class="logo-eyes" src="./img/logo_eyes.png" alt="logo" />
+    </div>
+    <div class="header-menu">
+      <div class="logo-container">
+        <img class="logo" src="../img/logo.png" alt="logo" />
+        <img class="logo-type" src="./img/lion_chiq_logotype.png" alt="" />
+      </div>
+      <div class="burger-wrapper">
+        <div class="burger-bars">
+          <div class="inner-div">
+            <div class="top"></div>
+            <div class="bottom"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="menu-wrapper">
+      <div class="menu-container">
+        <nav class="main-menu">
+          <ul class="menu-list">
+            <li class="menu-item">
+              <a class="link" href="admin_main.html">Home</a>
+            </li>
+            <li class="menu-item">
+              <a class="link" href="admin_work.html">Work</a>
+            </li>
+            <li class="menu-item">
+              <a class="link" href="admin_news.html">News</a>
+            </li>
+            <li class="menu-item">
+              <a class="link" href="admin_invoices.html">Invoices</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
+    </div>
+
+    <!-- INDEX BLOCK -->
+    <div class="invoice-container">
+      <div class="invoice">
+        <h1>Send Invoice</h1>
+        <form action="/dist/admin_views/admin_new_invoice.html" method="get" class="invoice-form" onsubmit="return confirm('Are you sure you want to edit this invoice?');">
+          <div class="invoice-items addresses">
+            <div class="invoice-section address">
+              <div class="form-group invoice-form-group">
+                <label for="billing_entity">Billing Entity:</label>
+                <input
+                  readonly
+                  type="text"
+                  class="text-input invoice-input"
+                  name="billing_entity"
+                  placeholder="Billing Entity"
+                />
+              </div>
+              <div class="form-group invoice-form-group">
+                <label for="street">Street:</label>
+                <input
+                  readonly
+                  type="text"
+                  class="text-input invoice-input"
+                  name="street"
+                  placeholder="Street"
+                />
+              </div>
+              <div class="form-group invoice-form-group">
+                <label for="post_code">Post Code:</label>
+                <input
+                  readonly
+                  type="text"
+                  class="text-input invoice-input"
+                  name="post_code"
+                  placeholder="Post Code"
+                />
+              </div>
+              <div class="form-group invoice-form-group">
+                <label for="town">Town:</label>
+                <input
+                  readonly
+                  type="text"
+                  class="text-input invoice-input"
+                  name="town"
+                  placeholder="Town"
+                />
+              </div>
+            </div>
+            <div class="invoice-section address">
+              <div class="form-group invoice-form-group">
+                <label for="billing_to">Billed To:</label>
+                <input
+                  readonly
+                  type="text"
+                  class="text-input invoice-input"
+                  name="billing_to"
+                  placeholder="Billed To"
+                />
+              </div>
+              <div class="form-group invoice-form-group">
+                <label for="recipient_street">Recipient Street:</label>
+                <input
+                  readonly
+                  type="text"
+                  class="text-input invoice-input"
+                  name="recipient_street"
+                  placeholder="Recipient Street"
+                />
+              </div>
+              <div class="form-group invoice-form-group">
+                <label for="recipient_post_code">Recipient Post Code:</label>
+                <input
+                  readonly
+                  type="text"
+                  class="text-input invoice-input"
+                  name="recipient_post_code"
+                  placeholder="Recipient Post Code"
+                />
+              </div>
+              <div class="form-group invoice-form-group">
+                <label for="recipient_post_code">Recipient Town:</label>
+                <input
+                  readonly
+                  type="text"
+                  class="text-input invoice-input"
+                  name="recipient_town"
+                  placeholder="Recipient Town"
+                />
+              </div>
+            </div>
+            <div class="invoice-section address">
+              <div class="form-group invoice-form-group">
+                <label for="invoice_number">Invoice Number:</label>
+                <input
+                  readonly
+                  type="text"
+                  class="text-input invoice-input"
+                  name="invoice_number"
+                  placeholder="Invoice Number"
+                />
+              </div>
+              <div class="form-group invoice-form-group">
+                <label for="acount_number">Acount Number:</label>
+                <input
+                  readonly
+                  type="text"
+                  class="text-input invoice-input"
+                  name="acount_number"
+                  placeholder="Acount Number"
+                />
+              </div>
+              <div class="form-group invoice-form-group">
+                <label for="sort_code">Sort Code:</label>
+                <input
+                  readonly
+                  type="text"
+                  class="text-input invoice-input"
+                  name="sort_code"
+                  placeholder="Sort Code"
+                />
+              </div>
+            </div>
+            <div class="invoice-section address">
+              <div class="form-group invoice-form-group">
+                <label for="issue_date">Issue Date:</label>
+                <input
+                  readonly
+                  type="text"
+                  class="text-input invoice-input"
+                  name="issue_date"
+                  placeholder="Issue Date"
+                />
+              </div>
+              <div class="form-group invoice-form-group">
+                <label for="payment_due">Payment Due:</label>
+                <input
+                  readonly
+                  type="text"
+                  class="text-input invoice-input"
+                  name="payment_due"
+                  placeholder="Payment Due"
+                />
+              </div>
+            </div>
+          </div>
+          <div class="table-container">
+            <table class="table" id="items-table">
+              <thead>
+                <th>Item</th>
+                <th>Unit Cost</th>
+                <th>Quantity</th>
+                <th>Total</th>
+              </thead>
+              <tbody>
+                <tr class="item-row" >
+                  <td class="data" data-label="Item">
+                    <input type="text"
+                    readonly
+                    class="invoice-input" 
+                    name="item_0" 
+                    placeholder="Item"
+                  />
+                  </td>
+                  <td class="data" data-label="Unit Cost">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input unit-cost"
+                    name="unit_cost_0"
+                    placeholder="Unit Cost"
+                  />
+                  </td>
+                  <td class="data" data-label="Quantity">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input quantity"
+                    name="quantity_0"
+                    placeholder="Quantity"
+                  />
+                  </td>
+                  <td class="data" data-label="Total">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input total"
+                    name="quantity_0"
+                    placeholder="Total"
+                  />
+                  </td>
+                </tr>
+                <tr class="item-row" >
+                  <td class="data" data-label="Item">
+                    <input type="text"
+                    readonly
+                    class="invoice-input" 
+                    name="item_1" 
+                    placeholder="Item"
+                  />
+                  </td>
+                  <td class="data" data-label="Unit Cost">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input unit-cost"
+                    name="unit_cost_1"
+                    placeholder="Unit Cost"
+                  />
+                  </td>
+                  <td class="data" data-label="Quantity">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input quantity"
+                    name="quantity_1"
+                    placeholder="Quantity"
+                  />
+                  </td>
+                  <td class="data" data-label="Total">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input total"
+                    name="total_1"
+                    placeholder="Total"
+                  />
+                  </td>
+                </tr>
+                <tr class="item-row" >
+                  <td class="data" data-label="Item">
+                    <input type="text"
+                    readonly
+                    class="invoice-input" 
+                    name="item_2" 
+                    placeholder="Item"
+                  />
+                  </td>
+                  <td class="data" data-label="Unit Cost">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input unit-cost"
+                    name="unit_cost_2"
+                    placeholder="Unit Cost"
+                  />
+                  </td>
+                  <td class="data" data-label="Quantity">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input quantity"
+                    name="quantity_2"
+                    placeholder="Quantity"
+                  />
+                  </td>
+                  <td class="data" data-label="Total">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input total"
+                    name="total_2"
+                    placeholder="Total"
+                  />
+                  </td>
+                </tr>
+                <tr class="item-row" >
+                  <td class="data" data-label="Item">
+                    <input type="text"
+                    readonly
+                    class="invoice-input" 
+                    name="item_3" 
+                    placeholder="Item"
+                  />
+                  </td>
+                  <td class="data" data-label="Unit Cost">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input unit-cost"
+                    name="unit_cost_3"
+                    placeholder="Unit Cost"
+                  />
+                  </td>
+                  <td class="data" data-label="Quantity">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input quantity"
+                    name="quantity_3"
+                    placeholder="Quantity"
+                  />
+                  </td>
+                  <td class="data" data-label="Total">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input total"
+                    name="total_3"
+                    placeholder="Total"
+                  />
+                  </td>
+                </tr>
+                <tr class="item-row" >
+                  <td class="data" data-label="Item">
+                    <input type="text"
+                    readonly
+                    class="invoice-input" 
+                    name="item_4" 
+                    placeholder="Item"
+                  />
+                  </td>
+                  <td class="data" data-label="Unit Cost">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input unit-cost"
+                    name="unit_cost_4"
+                    placeholder="Unit Cost"
+                  />
+                  </td>
+                  <td class="data" data-label="Quantity">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input quantity"
+                    name="quantity_4"
+                    placeholder="Quantity"
+                  />
+                  </td>
+                  <td class="data" data-label="Total">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input total"
+                    name="total_4"
+                    placeholder="Total"
+                  />
+                  </td>
+                </tr>
+                <tr class="item-row" >
+                  <td class="data" data-label="Item">
+                    <input type="text"
+                    readonly
+                    class="invoice-input" 
+                    name="item_5" 
+                    placeholder="Item"
+                  />
+                  </td>
+                  <td class="data" data-label="Unit Cost">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input unit-cost"
+                    name="unit_cost_5"
+                    placeholder="Unit Cost"
+                  />
+                  </td>
+                  <td class="data" data-label="Quantity">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input quantity"
+                    name="quantity_5"
+                    placeholder="Quantity"
+                  />
+                  </td>
+                  <td class="data" data-label="Total">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input total"
+                    name="total_5"
+                    placeholder="Total"
+                  />
+                  </td>
+                </tr>
+                <tr class="item-row" >
+                  <td class="data" data-label="Item">
+                    <input type="text"
+                    readonly
+                    class="invoice-input" 
+                    name="item_6" 
+                    placeholder="Item"
+                  />
+                  </td>
+                  <td class="data" data-label="Unit Cost">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input unit-cost"
+                    name="unit_cost_6"
+                    placeholder="Unit Cost"
+                  />
+                  </td>
+                  <td class="data" data-label="Quantity">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input quantity"
+                    name="quantity_6"
+                    placeholder="Quantity"
+                  />
+                  </td>
+                  <td class="data" data-label="Total">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input total"
+                    name="total_6"
+                    placeholder="Total"
+                  />
+                  </td>
+                </tr>
+                <tr class="item-row" >
+                  <td class="data" data-label="Item">
+                    <input type="text"
+                    readonly
+                    class="invoice-input" 
+                    name="item_7" 
+                    placeholder="Item"
+                  />
+                  </td>
+                  <td class="data" data-label="Unit Cost">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input unit-cost"
+                    name="unit_cost_7"
+                    placeholder="Unit Cost"
+                  />
+                  </td>
+                  <td class="data" data-label="Quantity">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input quantity"
+                    name="quantity_7"
+                    placeholder="Quantity"
+                  />
+                  </td>
+                  <td class="data" data-label="Total">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input total"
+                    name="total_7"
+                    placeholder="Total"
+                  />
+                  </td>
+                </tr>
+                <tr class="item-row" >
+                  <td class="data" data-label="Item">
+                    <input type="text"
+                    readonly
+                    class="invoice-input" 
+                    name="item_8" 
+                    placeholder="Item"
+                  />
+                  </td>
+                  <td class="data" data-label="Unit Cost">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input unit-cost"
+                    name="unit_cost_8"
+                    placeholder="Unit Cost"
+                  />
+                  </td>
+                  <td class="data" data-label="Quantity">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input quantity"
+                    name="quantity_8"
+                    placeholder="Quantity"
+                  />
+                  </td>
+                  <td class="data" data-label="Total">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input total"
+                    name="total_8"
+                    placeholder="Total"
+                  />
+                  </td>
+                </tr>
+                <tr class="item-row" >
+                  <td class="data" data-label="Item">
+                    <input type="text"
+                    readonly
+                    class="invoice-input" 
+                    name="item_9" 
+                    placeholder="Item"
+                  />
+                  </td>
+                  <td class="data" data-label="Unit Cost">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input unit-cost"
+                    name="unit_cost_9"
+                    placeholder="Unit Cost"
+                  />
+                  </td>
+                  <td class="data" data-label="Quantity">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input quantity"
+                    name="quantity_9"
+                    placeholder="Quantity"
+                  />
+                  </td>
+                  <td class="data" data-label="Total">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input total"
+                    name="total_9"
+                    placeholder="Total"
+                  />
+                  </td>
+                </tr>
+                <tr class="item-row" >
+                  <td class="data" data-label="Item">
+                    <input type="text"
+                    readonly
+                    class="invoice-input" 
+                    name="item_10" 
+                    placeholder="Item"
+                  />
+                  </td>
+                  <td class="data" data-label="Unit Cost">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input unit-cost"
+                    name="unit_cost_10"
+                    placeholder="Unit Cost"
+                  />
+                  </td>
+                  <td class="data" data-label="Quantity">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input quantity"
+                    name="quantity_10"
+                    placeholder="Quantity"
+                  />
+                  </td>
+                  <td class="data" data-label="Total">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input total"
+                    name="total_10"
+                    placeholder="Total"
+                  />
+                  </td>
+                </tr>
+                <tr class="item-row" >
+                  <td class="data" data-label="Item">
+                    <input type="text"
+                    readonly
+                    class="invoice-input" 
+                    name="item_11" 
+                    placeholder="Item"
+                  />
+                  </td>
+                  <td class="data" data-label="Unit Cost">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input unit-cost"
+                    name="unit_cost_11"
+                    placeholder="Unit Cost"
+                  />
+                  </td>
+                  <td class="data" data-label="Quantity">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input quantity"
+                    name="quantity_11"
+                    placeholder="Quantity"
+                  />
+                  </td>
+                  <td class="data" data-label="Total">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input total"
+                    name="quantity_11"
+                    placeholder="Total"
+                  />
+                  </td>
+                </tr>
+                <tr class="item-row" >
+                  <td class="data" data-label="Item">
+                    <input type="text"
+                    readonly
+                    class="invoice-input" 
+                    name="item_12" 
+                    placeholder="Item"
+                  />
+                  </td>
+                  <td class="data" data-label="Unit Cost">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input unit-cost"
+                    name="unit_cost_12"
+                    placeholder="Unit Cost"
+                  />
+                  </td>
+                  <td class="data" data-label="Quantity">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input quantity"
+                    name="quantity_12"
+                    placeholder="Quantity"
+                  />
+                  </td>
+                  <td class="data" data-label="Total">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input total"
+                    name="total_12"
+                    placeholder="Total"
+                  />
+                  </td>
+                </tr>
+                <tr class="item-row" >
+                  <td class="data" data-label="Item">
+                    <input type="text"
+                    readonly
+                    class="invoice-input" 
+                    name="item_13" 
+                    placeholder="Item"
+                  />
+                  </td>
+                  <td class="data" data-label="Unit Cost">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input unit-cost"
+                    name="unit_cost_13"
+                    placeholder="Unit Cost"
+                  />
+                  </td>
+                  <td class="data" data-label="Quantity">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input quantity"
+                    name="quantity_13"
+                    placeholder="Quantity"
+                  />
+                  </td>
+                  <td class="data" data-label="Total">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input total"
+                    name="total_13"
+                    placeholder="Total"
+                  />
+                  </td>
+                </tr>
+                <tr class="item-row" >
+                  <td class="data" data-label="Item">
+                    <input type="text"
+                    readonly
+                    class="invoice-input" 
+                    name="item_14" 
+                    placeholder="Item"
+                  />
+                  </td>
+                  <td class="data" data-label="Unit Cost">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input unit-cost"
+                    name="unit_cost_14"
+                    placeholder="Unit Cost"
+                  />
+                  </td>
+                  <td class="data" data-label="Quantity">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input quantity"
+                    name="quantity_14"
+                    placeholder="Quantity"
+                  />
+                  </td>
+                  <td class="data" data-label="Total">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input total"
+                    name="total_14"
+                    placeholder="Total"
+                  />
+                  </td>
+                </tr>
+                <tr class="item-row" >
+                  <td class="void-data">
+                  </td>
+                  <td class="void-data">
+                  </td>
+                  <td class="data" >
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input total-label"
+                    name="total_14"
+                    value="Main Total:"
+                  />
+                  </td>
+                  <td class="data" data-label="Total">
+                    <input
+                    readonly
+                    type="text"
+                    class="invoice-input main-total"
+                    name="total_14"
+                    placeholder="Total"
+                  />
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div class="send-to">
+            <label for="items">Send to:</label>
+                <input
+                  readonly
+                  type="text"
+                  class="invoice-input"
+                  name="recipient-email"
+                  placeholder="Email"
+                />
+          </div>
+          <button type="submit" class="btn submit-btn" >Edit</button>
+        </form>
+    </div>
+    <!-- LOGIN PAGE END-->
+    <!-- ENDBLOCK -->
+    <script src="../js/invoice.js"></script>
+    <script src="../js/burger_menu.js"></script>
+  </body>
+</html>
